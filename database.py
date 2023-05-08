@@ -73,5 +73,5 @@ class SqliteDatabase:
 
     def get_user_by_email(self, login: str):
         session = self.session()
-        user = session.query(User).filter(User.email == login).one()
+        user = session.query(User).filter(User.email == login).first()
         return user
